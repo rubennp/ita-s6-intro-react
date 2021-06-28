@@ -1,6 +1,6 @@
-const Escena = () => {
+const Escena = (props) => {
     return (
-        <p>El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial</p>
+        <p>{props.frase}</p>
     );
 };
 

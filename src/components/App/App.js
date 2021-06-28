@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-import Escena from "./components/escena/Escena";
-import Boto from "./components/escena/Boto";
+// Styled Components
+import { GlobalStyle } from '../../assets/GlobalStyle';
+import { Benvinguda } from '../Benvinguda';
+import { Navega }  from './Navega.styled';
+import { Escenes } from '../Escenes';
 
-import frases from "./assets/data";
+// Components
+import Escena from "../Escena";
+import Boto from "../Boto/";
 
-import './css/App.css';
+// Dades
+import frases from "../../assets/data";
 
 const  App = () => {
   const [pos, setPos] = useState(0);
@@ -16,25 +22,26 @@ const  App = () => {
 
   return benvinguda ?
   (
-    <main className="pantBenv">
+    <Benvinguda>
       <h1>Benvingut/da al tutorial en línea</h1>
       <h2>
         A la següent pantalla trobaràs les instruccions,<br/>
         fés-hi servir els botons "Anterior" o "Següent" per marcar la instrucció corresponent
       </h2>
       <button type="button" onClick={() => setBenvinguda(false)}>Endavant ☞</button>
-    </main>
+    </Benvinguda>
   ) 
   :
   (
-    <div style={{backgroundImage: `url("./img/${frases[pos].img}")`, backgroundSize: "cover", height: "100vh"}}>
-      <ul>
+    <div>
+      <GlobalStyle img={`./img/${frases[pos].img}`} />
+      <Navega>
         <Boto key="0" func="Anterior" hFunc={antFrase}/>
         <Boto key="1" func="Següent" hFunc={segFrase}/>
-      </ul>
-      <main>
+      </Navega>
+      <Escenes>
         {frases.map((frase, index) => <Escena key={index} frase={frase.txt} actiu={pos === index}/>)}
-      </main>
+      </Escenes>
     </div>
   );
 };

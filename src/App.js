@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Escena from "./components/escena/Escena";
 import Boto from "./components/escena/Boto";
 
-import frases from "./assets/frases.json";
+import frases from "./assets/data";
 
 import './css/App.css';
 
@@ -27,13 +27,13 @@ const  App = () => {
   ) 
   :
   (
-    <div>
+    <div style={{backgroundImage: `url("./img/${frases[pos].img}")`, backgroundSize: "cover", height: "100vh"}}>
       <ul>
         <Boto key="0" func="Anterior" hFunc={antFrase}/>
         <Boto key="1" func="Següent" hFunc={segFrase}/>
       </ul>
       <main>
-        {frases.map((frase, index) => <Escena key={index} frase={frase} actiu={pos === index}/>)}
+        {frases.map((frase, index) => <Escena key={index} frase={frase.txt} actiu={pos === index}/>)}
       </main>
     </div>
   );

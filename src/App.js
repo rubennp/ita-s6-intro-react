@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Escena from "./components/escena/Escena";
-import Boto from "./components/escena/Boto";
+import Escena from "./components/Escena/Escena";
+import Boto from "./components/Escena/Boto";
 
 import frases from "./assets/frases.json";
 

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 
 // Styled Components
 import { GlobalStyle } from '../../assets/GlobalStyle';
-import { Benvinguda } from '../Benvinguda';
-import { Navega }  from './Navega.styled';
-import { Escenes } from '../Escenes';
+import { Navega, Escenes, Benvinguda }  from './App.styled';
 
 // Components
 import Escena from "../Escena";

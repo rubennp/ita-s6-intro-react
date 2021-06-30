@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const Navega = styled.ul`
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+`;
+
+export const Escenes = styled.main`
+    padding: 0 20px;
+`;
+
 export const Benvinguda = styled.main`
     font-family: Arial, sanserif;
     display: flex;

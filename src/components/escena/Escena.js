@@ -1,9 +1,5 @@
-import { P } from './P.styled';
+import { P } from './Escena.styled';
 
-const Escena = (props) => {
-    return (
-        <P actiu={props.actiu}>{props.frase}</P>
-    );
-};
+const Escena = ({ actiu, frase }) => <P actiu={actiu}>{frase}</P>;
 
 export default Escena;

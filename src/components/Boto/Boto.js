@@ -1,5 +1,4 @@
-import { Li } from "./Li.styled";
-import { Btn } from "./Btn.styled";
+import { Btn, Li } from "./Boto.styled";
 
 const Boto = (props) => {
     return (

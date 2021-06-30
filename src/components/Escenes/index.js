@@ -1,1 +1,0 @@
-export { Escenes } from './Escenes.styled';

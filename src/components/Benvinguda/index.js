@@ -1,1 +1,0 @@
-export { Benvinguda } from './Benvinguda.styled';

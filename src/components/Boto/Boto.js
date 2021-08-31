@@ -1,9 +1,9 @@
 import { Btn, Li } from "./Boto.styled";
 
-const Boto = (props) => {
+const Boto = ({hFunc, func}) => {
     return (
         <Li>
-            <Btn onClick={props.hFunc} type="button">{props.func}</Btn>
+            <Btn onClick={hFunc} type="button">{func}</Btn>
         </Li>
     );
 };
